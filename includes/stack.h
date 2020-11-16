@@ -12,6 +12,7 @@ typedef struct		s_node
 typedef struct		s_stack
 {
 	t_node			*head;
+	t_node			*tail;
 	size_t			length;
 
 	struct s_stack	*(*new_stack)();

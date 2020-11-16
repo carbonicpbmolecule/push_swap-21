@@ -24,6 +24,7 @@ t_node	*push_node(struct s_stack *stack, int value)
 	if (stack->head == NULL)
 	{
 		stack->head = node;
+		stack->tail = node;
 	}
 	else
 	{
@@ -47,6 +48,11 @@ t_node	*pop_node(struct s_stack *stack)
 	{
 		stack->head = stack->head->next;
 		free(tmp);
+		stack->length--;
+	}
+	if (stack->length == 0)
+	{
+		stack->tail = NULL;
 	}
 	return (stack->head);
 }
@@ -86,6 +92,7 @@ t_stack	*new_stack(void)
 		return (NULL);
 	}
 	stack->head = NULL;
+	stack->tail = NULL;
 	stack->length = 0;
 	stack->new_stack = new_stack;
 	stack->push_node = push_node;

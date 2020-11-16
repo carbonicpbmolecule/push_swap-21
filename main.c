@@ -1,15 +1,15 @@
 #include "push_swap.h"
 
-void print_stack(t_stack *stack)
-{
-	t_node *pointer = stack->head;
+// void print_stack(t_stack *stack)
+// {
+// 	t_node *pointer = stack->head;
 
-	while (pointer != NULL)
-	{
-		printf("%d\n", pointer->value);
-		pointer = pointer->next;
-	}
-}
+// 	while (pointer != NULL)
+// 	{
+// 		printf("%d\n", pointer->value);
+// 		pointer = pointer->next;
+// 	}
+// }
 
 int main()
 {
@@ -18,10 +18,13 @@ int main()
 	a->push_node(a, 1);
 	a->push_node(a, 2);
 	a->push_node(a, 3);
+	a->push_node(a, 4);
+	a->push_node(a, 5);
 	
+	// swap(a);
 	a->pop_node(a);
 
-	print_stack(a);
+	// print_stack(a);
 
 	rm_stack(a);
 

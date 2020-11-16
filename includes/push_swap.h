@@ -4,4 +4,6 @@
 # include <stdlib.h>
 # include "stack.h"
 
+t_node	*swap(t_stack *stack);
+
 #endif
